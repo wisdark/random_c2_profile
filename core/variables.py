@@ -5,6 +5,8 @@ Variables are mapped to the variable in c2profile_template.jinja template
 from core.functions import *
 
 variables = {
+# Cobalt Strike Version
+"version"                       : "4.6",
 # Created
 "timestamp"                     : get_date(),
 # Timing
@@ -21,6 +23,10 @@ variables = {
 "https_certificate_O"           : get_https_certificate_o(),
 "https_certificate_OU"          : get_https_certificate_ou(),
 "https_certificate_V"           : "365",
+# Task and Proxy Max Size
+"tasks_max_size"                : "1048576",
+"tasks_proxy_max_size"          : "921600",
+"tasks_dns_proxy_max_size"      : "71680",  
 # TCP Beacon
 "tcp_port"                      : get_tcpport(),
 "tcp_frame_header"              : get_tcp_frame_header(),
